@@ -343,7 +343,36 @@ body {
 /*
 SECCIONES
 
-*/
+
+/*Seccion sobre mi: */
+.seccion-sobremi {
+  min-height: 100vh;
+  margin-left: 300px;
+  margin-top: 0;
+  padding: 2rem 1rem;
+  background-color: var(--background-seccion-oscuro);
+  font-size: 4rem;
+  color: white;
+  background-color: var(--background-seccion-medio);
+}
+
+.seccion-sobremi-titulo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #040b14;
+  position: relative;
+}
+
+.seccion-sobremi-titulo::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 3px;
+  background-color: #0a66c2;
+}
 
 /*Media queries*/
 @media (max-width: 768px) {
