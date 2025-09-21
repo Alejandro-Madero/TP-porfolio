@@ -265,7 +265,7 @@ body {
 }
 
 .nav-titulo:hover a {
-  color: var(--color-seccion-claro);
+  color: var(--background-seccion-claro);
 }
 
 .logo {
