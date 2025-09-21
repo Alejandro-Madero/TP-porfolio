@@ -1,0 +1,298 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*Estilos propios: */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 1rem;
+  border-radius: 3px;
+  background-color: rgb(198, 196, 196);
+}
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: #000000;
+}
+.header-titulo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.header-image-container {
+  padding: 2rem 0.5rem 0.5rem 0.5rem;
+  display: grid;
+  place-items: center;
+
+  gap: 1rem;
+}
+
+.header-foto {
+  border: solid 8px rgba(200, 200, 200, 0.8);
+
+  width: 60%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-redessociales {
+  padding: 0 0.5rem;
+
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.icono-instagram {
+  width: 30px;
+  height: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.25s opacity;
+}
+
+.icono-instagram:hover {
+  opacity: 1;
+}
+.icono-linkedin {
+  width: 30px;
+  height: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: color 0.25s;
+}
+
+.icono-linkedin:hover {
+  color: #0a66c2;
+}
+
+.icono-github {
+  width: 30px;
+  height: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.icono-github:hover {
+  transition: color 0.25s;
+  color: white;
+}
+
+.navegacion {
+  padding: 2rem;
+  margin: 0;
+  display: flex;
+
+  background-color: rgb(163, 8, 127);
+}
+
+.lista-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.botones-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s;
+}
+
+.seccion-main {
+  margin-left: 300px;
+
+  background-color: rgba(10, 10, 10, 0.8);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4rem 2rem;
+}
+
+.contenedor-imagen {
+  padding: 1rem;
+  display: grid;
+  place-items: center;
+}
+.foto-perfil {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo {
+  fill: rgba(10, 10, 10, 0.784);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 128px;
+  height: 128px;
+  transform: translate(-20%, -20%) rotate(145deg);
+  overflow: hidden;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.logo:hover {
+  transform: translate(-15%, -15%) rotate(135deg);
+}
+
+.main-titulo {
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    transform: translate(-30%, -28%) rotate(145deg) scale(0.6);
+  }
+
+  .logo:hover {
+    transform: translate(-30%, -28%) rotate(145deg) scale(0.7);
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    transform: translate(-35%, -32%) rotate(145deg) scale(0.5);
+  }
+
+  .logo:hover {
+    transform: translate(-35%, -32%) rotate(145deg) scale(0.6);
+  }
+}
