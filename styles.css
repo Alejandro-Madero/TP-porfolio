@@ -130,12 +130,19 @@ table {
 
 /*Estilos propios: */
 
+:root {
+  --color-botones-nav: #a8a9b4;
+  --color-background-nav: #040b14;
+  --color-seccion-claro: #ffffff;
+  --color-seccion-acento: #f4fafd;
+  --fondo-icono: #a8a9b4;
+  --fondo-icono-seleccionado: #149ddd;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
 body {
   font-family: "Roboto", sans-serif;
-  padding: 1rem;
-  border-radius: 3px;
   background-color: rgb(198, 196, 196);
 }
 .header {
@@ -144,7 +151,7 @@ body {
   top: 0;
   bottom: 0;
   width: 300px;
-  background-color: #000000;
+  background-color: var(--color-background-nav);
 }
 .header-titulo {
   color: #ffffff;
@@ -161,7 +168,7 @@ body {
 }
 
 .header-foto {
-  border: solid 8px rgba(200, 200, 200, 0.8);
+  border: solid 8px rgba(76, 71, 71, 0.8);
 
   width: 60%;
   border-radius: 50%;
@@ -169,8 +176,7 @@ body {
 }
 
 .header-redessociales {
-  padding: 0 0.5rem;
-
+  padding: 0.5rem 0.5rem;
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -216,32 +222,60 @@ body {
   padding: 2rem;
   margin: 0;
   display: flex;
-
-  background-color: rgb(163, 8, 127);
-}
-
-.lista-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 .botones-nav a {
-  color: white;
   text-decoration: none;
+  color: white;
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 0.3rem;
   transition: background-color 0.3s;
 }
 
-.seccion-main {
-  margin-left: 300px;
+.lista-nav {
+  padding: 3rem 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
 
+.lista-nav li {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.icono-nav {
+  fill: var(--fondo-icono);
+  width: 24px;
+  height: 24px;
+}
+
+.icono-nav-seleccioado {
+  fill: var(--fondo-icono-seleccionado);
+}
+
+.nav-titulo a {
+  align-self: center;
+  text-decoration: none;
+  font-weight: 800;
+  color: var(--color-botones-nav);
+  transition: color 0.25s;
+}
+
+.nav-titulo:hover a {
+  color: var(--color-seccion-claro);
+}
+
+.seccion-main {
+  min-height: 100vh;
+  margin-left: 300px;
+  margin-top: 0;
   background-color: rgba(10, 10, 10, 0.8);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 4rem 2rem;
+  grid-template-columns: 2fr 1fr;
+  place-items: center;
+  padding-inline: 1rem;
 }
 
 .contenedor-imagen {
@@ -277,6 +311,12 @@ body {
   font-size: 2rem;
 }
 
+/*
+SECCIONES
+
+*/
+
+/*Media queries*/
 @media (max-width: 768px) {
   .logo {
     transform: translate(-30%, -28%) rotate(145deg) scale(0.6);
