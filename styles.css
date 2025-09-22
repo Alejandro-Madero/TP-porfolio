@@ -149,13 +149,12 @@ body {
 
 .anchor-repo {
   position: absolute;
+  overflow: hidden;
   right: 0;
   top: 0;
-
-  transition: all 0.5s;
 }
 .link-al-repo {
-  position: absolute;
+  position: relative;
   right: -20%;
   top: -20%;
   width: 300px;
@@ -163,11 +162,11 @@ body {
   color: white;
   z-index: 999;
   filter: brightness(50%);
-  transform: translate(30%, -30%) rotate(225deg);
+  transform: translate(10%, -40%) rotate(225deg);
   transition: all 0.25s;
 }
 .link-al-repo:hover {
-  transform: translate(0%, 0%) rotate(215deg);
+  transform: translate(-15%, -10%) rotate(215deg);
   filter: brightness(100%);
 }
 
