@@ -526,9 +526,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-.card-formulario {
-  min-width: 700px;
-}
 
 .contenedor-form form {
   min-height: 200px;
@@ -574,7 +571,7 @@ label {
 }
 /*Media queries*/
 
-@media (max-width: 768px) {
+@media ((min-width: 0px) and (max-width: 768px)) {
   .boton-menu-container {
     position: fixed;
     display: block;
@@ -670,5 +667,54 @@ label {
   .card-formulario {
     max-width: 300px;
     min-width: 300px;
+  }
+}
+
+@media ((min-width: 769px) and (max-width: 1250px)) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-tecnologias {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .iconos-tecnologias {
+    width: 120px;
+    height: 120px;
+  }
+
+  .card-formulario {
+    width: 500px;
+    max-width: 80%;
+  }
+}
+
+@media ((min-width: 1251px) and (max-width: 1400px)) {
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-tecnologias {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .iconos-tecnologias {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card-formulario {
+    width: 600px;
+    max-width: 80%;
+  }
+}
+
+@media (min-width: 1401px) {
+  .card-formulario {
+    width: 700px;
+    max-width: 80%;
   }
 }
