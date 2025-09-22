@@ -165,7 +165,9 @@ body {
 .ocultar {
   display: none;
 }
-
+.transparente {
+  visibility: none;
+}
 .anchor-repo {
   position: absolute;
   overflow: hidden;

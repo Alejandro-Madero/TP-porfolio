@@ -30,9 +30,10 @@ const botonMenuAbrir = document.querySelector(".boton-menu-abrir");
 
 const mostrarMenu = function () {
   if (window.viewport.segments[0].width >= 768) {
-    console.log("chico");
+    headerEl.classList.remove("transparente");
   } else {
     headerEl.classList.add("header-no-visible");
+    headerEl.classList.remove("transparente");
   }
 };
 
