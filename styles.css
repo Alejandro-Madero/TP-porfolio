@@ -188,6 +188,10 @@ body {
   font-weight: 800;
 }
 
+.nombre {
+  color: var(--fondo-icono-seleccionado);
+}
+
 .header-image-container {
   padding: 2rem 0.5rem 0.5rem 0.5rem;
   display: grid;
@@ -559,11 +563,66 @@ label {
 }
 
 @media (max-width: 500px) {
-  .logo {
-    transform: translate(-35%, -32%) rotate(145deg) scale(0.5);
+  .header {
+    visibility: hidden;
   }
 
-  .logo:hover {
-    transform: translate(-35%, -32%) rotate(145deg) scale(0.6);
+  .main-titulo {
+    font-size: 2rem;
+  }
+
+  .seccion {
+    margin: 0;
+  }
+
+  .link-al-repo {
+    width: 150px;
+    height: 150px;
+  }
+
+  .main-descripcion {
+    font-size: 2.25rem;
+  }
+
+  .cursor {
+    font-size: 2.25rem;
+  }
+
+  .seccion-sobremi-texto {
+    font-size: 1rem;
+  }
+
+  .seccion-conocimientos-text {
+    font-size: 1rem;
+  }
+
+  .seccion-sobremi {
+    padding: 1.5rem;
+  }
+
+  .seccion-conocimientos {
+    padding: 1rem;
+  }
+
+  .seccion-proyectos {
+    padding: 1rem;
+  }
+  .grid-tecnologias {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .iconos-tecnologias {
+    width: 80px;
+    height: 80px;
+  }
+
+  .grid-proyectos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-formulario {
+    max-width: 300px;
+    min-width: 300px;
   }
 }
