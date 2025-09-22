@@ -142,6 +142,9 @@ table {
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Roboto", sans-serif;
   background-color: rgb(198, 196, 196);
@@ -252,7 +255,7 @@ body {
   height: 30px;
 }
 
-.icono-nav-seleccioado {
+.icono-nav-seleccionado {
   fill: var(--fondo-icono-seleccionado);
 }
 

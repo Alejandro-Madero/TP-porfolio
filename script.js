@@ -1,8 +1,23 @@
 console.log("hello world!");
 
+//Secciones
+
+const seccionMainEl = document.querySelector(".seccion-main");
+const seccionTecnologiasEl = document.querySelector(".seccion-conocimientos");
+const seccionProyectosEl = document.querySelector(".seccion-proyectos");
+const seccionContantoEl = document.querySelector(".seccion-contacto");
+const seccionSobreMiEl = document.querySelector(".seccion-sobremi");
+
+const secciones = [
+  seccionMainEl,
+  seccionTecnologiasEl,
+  seccionProyectosEl,
+  seccionContantoEl,
+  seccionSobreMiEl,
+];
+
 const profesionEl = document.querySelector(".main-descripcion");
 const cursoEl = document.querySelector(".cursor");
-
 const profesiones = ["Programador  ", "Controlador Aéreo  "];
 
 const escribirProfesion = function (profesiones) {
@@ -46,4 +61,37 @@ const escribirProfesion = function (profesiones) {
   }
 };
 
+const iconosSecciones = document.querySelectorAll(".icono-nav");
 escribirProfesion(profesiones);
+
+const handleInterseccion = function (el) {
+  const seccionActiva = el.id;
+  handleIconoSeccionActiva(seccionActiva);
+};
+
+const handleIconoSeccionActiva = function (seccion) {
+  iconosSecciones.forEach((iconoSec) => {
+    const tieneLaClase = iconoSec.classList.contains(seccion);
+    if (tieneLaClase) {
+      iconoSec.classList.add("icono-nav-seleccionado");
+    } else {
+      iconoSec.classList.remove("icono-nav-seleccionado");
+    }
+  });
+};
+secciones.forEach((seccion) => {
+  const opciones = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.8,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    const [evento] = entries;
+
+    if (evento.isIntersecting) {
+      handleInterseccion(evento.target);
+    }
+  }, opciones);
+  observer.observe(seccion);
+});
