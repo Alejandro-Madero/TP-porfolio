@@ -183,40 +183,16 @@ body {
   justify-content: center;
 }
 
-.icono-instagram {
+.iconos-redes {
   width: 30px;
   height: 30px;
-  color: rgba(255, 255, 255, 0.4);
-  opacity: 0.5;
   cursor: pointer;
-  transition: 0.25s opacity;
+  filter: brightness(50%);
+  transition: all 0.25s;
 }
 
-.icono-instagram:hover {
-  opacity: 1;
-}
-.icono-linkedin {
-  width: 30px;
-  height: 30px;
-  color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-  transition: color 0.25s;
-}
-
-.icono-linkedin:hover {
-  color: #0a66c2;
-}
-
-.icono-github {
-  width: 30px;
-  height: 30px;
-  color: rgba(255, 255, 255, 0.4);
-  cursor: pointer;
-}
-
-.icono-github:hover {
-  transition: color 0.25s;
-  color: white;
+.iconos-redes:hover {
+  filter: brightness(100%);
 }
 
 .navegacion {
@@ -288,6 +264,10 @@ body {
 .main-titulo {
   font-size: 2rem;
 }
+/*====================================================*/
+/*====================================================*/
+/*====================================================*/
+/*====================================================*/
 
 /*seccion main*/
 .seccion-main {
@@ -320,7 +300,7 @@ body {
 
 .cursor {
   font-weight: 700;
-  color: white;
+  color: var(--fondo-icono-seleccionado);
   padding-bottom: 0.25rem;
   border-bottom: 2.5px solid var(--fondo-icono-seleccionado);
 }
@@ -340,25 +320,30 @@ body {
   }
 }
 
-/*
-SECCIONES
-
-
+/*====================================================*/
+/*====================================================*/
+/*====================================================*/
+/*====================================================*/
+.card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px 1.75px rgba(0, 0, 0, 0.4);
+}
 /*Seccion sobre mi: */
 .seccion-sobremi {
   min-height: 100vh;
   margin-left: 300px;
   margin-top: 0;
-  padding: 2rem 1rem;
-  background-color: var(--background-seccion-oscuro);
+  padding: 2rem 2.5rem;
   font-size: 4rem;
-  color: white;
   background-color: var(--background-seccion-medio);
 }
 
 .seccion-sobremi-titulo {
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 4rem;
   color: #040b14;
   position: relative;
 }
@@ -368,11 +353,52 @@ SECCIONES
   position: absolute;
   display: block;
   left: 0;
-  bottom: -10px;
-  width: 80px;
+  bottom: -20px;
+  width: 100px;
   height: 3px;
   background-color: #0a66c2;
 }
+
+.seccion-sobremi-texto {
+  font-size: 1.25rem;
+}
+
+/*Seccion conocimientos*/
+
+.seccion-conocimientos {
+  min-height: 100vh;
+  margin-left: 300px;
+  margin-top: 0;
+  padding: 2rem 2.5rem;
+  font-size: 4rem;
+  background-color: var(--background-seccion-claro);
+}
+
+.contenedor-grid-tecnologias {
+  display: grid;
+  place-items: center;
+  padding: 5rem 0 3rem 0;
+}
+.grid-tecnologias {
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+}
+.iconos-tecnologias {
+  filter: grayscale(1);
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.iconos-tecnologias:hover {
+  filter: grayscale(0);
+  scale: 1.15;
+}
+
+/*Seccion proyectos*/
 
 /*Media queries*/
 @media (max-width: 768px) {
