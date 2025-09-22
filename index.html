@@ -76,7 +76,7 @@
                 d="M40-120v-80h880v80H40Zm120-120q-33 0-56.5-23.5T80-320v-440q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v440q0 33-23.5 56.5T800-240H160Zm0-80h640v-440H160v440Zm0 0v-440 440Z"
               />
             </svg>
-            <a href="#servicios">Conocimientos</a>
+            <a href="#conocimientos">Conocimientos</a>
           </li>
 
           <li class="nav-titulo">
@@ -89,7 +89,7 @@
                 d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm240-600h160v-80H400v80Zm400 360H600v80H360v-80H160v160h640v-160Zm-360 0h80v-80h-80v80Zm-280-80h200v-80h240v80h200v-200H160v200Zm320 40Z"
               />
             </svg>
-            <a href="#servicios">Proyectos</a>
+            <a href="#proyectos">Proyectos</a>
           </li>
 
           <li class="nav-titulo">
@@ -109,7 +109,7 @@
       </nav>
     </header>
 
-    <main class="seccion-main">
+    <main class="seccion seccion-main">
       <h2 class="main-titulo">Hola, soy Alejandro !</h2>
       <div>
         <div class="contenedor-descripcion">
@@ -118,37 +118,42 @@
         </div>
       </div>
     </main>
-    <section class="seccion-sobremi">
-      <h3 class="seccion-sobremi-titulo">Sobre mi</h3>
+    <section class="seccion seccion-sobremi">
+      <h3 class="seccion-titulo">Sobre mi</h3>
 
-      <div class="card">
-        <p class="seccion-sobremi-texto">
-          Soy Alejandro Madero, programador con experiencia en C++, C#, Go,
-          TypeScript, React, JavaScript, HTML y CSS, con sólidos conocimientos
-          en Linux, SQL y MongoDB. Disfruto desarrollar soluciones limpias y
-          escalables, aplicando buenas prácticas y un enfoque orientado a la
-          experiencia del usuario.
-        </p>
-      </div>
+      <div class="contenedor-cards">
+        <div class="card">
+          <p class="seccion-sobremi-texto">
+            ✅ Soy Alejandro Madero, programador con experiencia en C++, C#, Go,
+            TypeScript, React, JavaScript, HTML y CSS, con sólidos conocimientos
+            en Linux, SQL y MongoDB. Disfruto desarrollar soluciones limpias y
+            escalables, aplicando buenas prácticas y un enfoque orientado a la
+            experiencia del usuario.
+          </p>
+        </div>
 
-      <div class="card">
-        <p class="seccion-sobremi-texto">
-          Actualmente me desempeño como controlador aéreo en la torre de
-          Aeroparque, rol que me ha brindado disciplina, concentración y
-          capacidad para trabajar bajo presión, cualidades que también aplico al
-          desarrollo de software.
-        </p>
-      </div>
-      <div class="card">
-        <p class="seccion-sobremi-texto">
-          Busco crecer en proyectos que integren desarrollo full stack,
-          innovación tecnológica y optimización de procesos, combinando mi
-          formación técnica con mi compromiso de mejora continua.
-        </p>
+        <div class="card">
+          <p class="seccion-sobremi-texto">
+            ✅ Actualmente me desempeño como controlador aéreo en la torre de
+            Aeroparque, rol que me ha brindado disciplina, concentración y
+            capacidad para trabajar bajo presión, cualidades que también aplico
+            al desarrollo de software.
+          </p>
+        </div>
+        <div class="card">
+          <p class="seccion-sobremi-texto">
+            ✅ Busco crecer en proyectos que integren desarrollo full stack,
+            innovación tecnológica y optimización de procesos, combinando mi
+            formación técnica con mi compromiso de mejora continua.
+          </p>
+        </div>
       </div>
     </section>
-    <section class="seccion-conocimientos">
-      <h3 class="seccion-sobremi-titulo">Tecnologias</h3>
+    <section id="conocimientos" class="seccion-conocimientos">
+      <h3 class="seccion-titulo">Tecnologias</h3>
+      <p class="seccion-conocimientos-text">
+        ✅ Herramientas y lenguajes que forman parte de mi stack de trabajo.
+      </p>
       <div class="contenedor-grid-tecnologias">
         <div class="grid-tecnologias">
           <div>
@@ -232,8 +237,52 @@
         </div>
       </div>
     </section>
-    <section>Proyectos</section>
-    <section>Contacto</section>
+    <section class="seccion seccion-proyectos">
+      <h3 class="seccion-titulo">Proyectos</h3>
+
+      <div class="card">
+        <div class="proyecto-container">Refrigerios</div>
+      </div>
+      <div class="card">
+        <div class="proyecto-container">Tateti</div>
+      </div>
+    </section>
+    <section class="seccion-contacto seccion">
+      <h3 class="seccion-titulo">Contacto</h3>
+      <p class="seccion-conocimientos-text">
+        ↘️ Completá el formulario para enviarme un mensaje
+      </p>
+      <div class="contenedor-seccion-contacto">
+        <div class="card card-formulario">
+          <div class="contenedor-form">
+            <form action="" method="post">
+              <div class="contenedor-inputs">
+                <div>
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required />
+                </div>
+
+                <div>
+                  <label for="email">Correo electrónico:</label><br />
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div>
+                  <label for="mensaje">Mensaje:</label>
+                  <textarea
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
     <footer></footer>
   </body>
 </html>
