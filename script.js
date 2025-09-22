@@ -1,7 +1,7 @@
 console.log("hello world!");
 
 //Secciones
-
+const headerEl = document.querySelector(".header");
 const seccionMainEl = document.querySelector(".seccion-main");
 const seccionTecnologiasEl = document.querySelector(".seccion-conocimientos");
 const seccionProyectosEl = document.querySelector(".seccion-proyectos");
@@ -20,6 +20,23 @@ const profesionEl = document.querySelector(".main-descripcion");
 const cursoEl = document.querySelector(".cursor");
 const profesiones = ["Programador  ", "Controlador Aéreo  "];
 
+//Boton menu
+
+const botonMenuEl = document.querySelector(".boton-menu-container");
+const botonMenuCerrar = document.querySelector(".boton-menu-cerrar");
+const botonMenuAbrir = document.querySelector(".boton-menu-abrir");
+
+//Chequear ancho del viewport para decidir si muestro el menu o no:
+
+const mostrarMenu = function () {
+  if (window.viewport.segments[0].width >= 768) {
+    console.log("chico");
+  } else {
+    headerEl.classList.add("header-no-visible");
+  }
+};
+
+mostrarMenu();
 const escribirProfesion = function (profesiones) {
   let indexProfesion = 0;
   let indexLetra = 0;
@@ -94,4 +111,20 @@ secciones.forEach((seccion) => {
     }
   }, opciones);
   observer.observe(seccion);
+});
+
+//evento menu desplegable
+
+botonMenuEl.addEventListener("click", (e) => {
+  if (botonMenuAbrir.classList.contains("ocultar")) {
+    headerEl.classList.remove("header-visible");
+    headerEl.classList.add("header-no-visible");
+    botonMenuAbrir.classList.remove("ocultar");
+    botonMenuCerrar.classList.add("ocultar");
+  } else {
+    headerEl.classList.remove("header-no-visible");
+    headerEl.classList.add("header-visible");
+    botonMenuAbrir.classList.add("ocultar");
+    botonMenuCerrar.classList.remove("ocultar");
+  }
 });
