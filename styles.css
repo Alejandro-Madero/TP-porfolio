@@ -417,7 +417,50 @@ body {
   background-color: var(--background-seccion-medio);
   line-height: 1.15;
 }
+.grid-proyectos {
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 80%;
+}
+.card-proyecto {
+  max-width: 400px;
+}
 
+.proyecto-titulo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  justify-self: left;
+  align-self: center;
+}
+.proyecto-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.proyecto-container h5 {
+  justify-self: center;
+  font-weight: 700;
+}
+.img-proyecto {
+  width: 250px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.contenedor-tecnologias-proyecto {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.img-tecnologia-miniatura {
+  height: 40px;
+  width: 40px;
+}
 /* Seccion contacto*/
 .seccion-contacto {
   padding: 2rem 2.5rem 4rem 2.5rem;
