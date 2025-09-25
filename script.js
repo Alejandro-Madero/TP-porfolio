@@ -129,3 +129,13 @@ botonMenuEl.addEventListener("click", (e) => {
     botonMenuCerrar.classList.remove("ocultar");
   }
 });
+
+//Event listener resize para cuando se cambia a un ancho de pantalla mas chico
+window.addEventListener("resize", function (e) {
+  const width = e.currentTarget.window.innerWidth;
+
+  if (width <= 768) {
+    headerEl.classList.add("header-no-visible");
+    headerEl.classList.remove("header-visible");
+  }
+});
